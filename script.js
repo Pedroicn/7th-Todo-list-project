@@ -11,7 +11,16 @@ function addTasks(event) {
   } else {
     taskList.appendChild(li);
     li.innerHTML = input.value
+    li.className = 'list-item'
   }
   input.value = '';
   
+}
+
+
+let list = document.querySelector('#lista-tarefas');
+list.addEventListener('click', changeColorTask)
+
+function changeColorTask(event) {
+  event.target.style.backgroundColor = 'gray'  
 }
