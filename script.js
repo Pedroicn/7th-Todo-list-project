@@ -17,7 +17,7 @@ function addTasks(event) {
   
 }
 
-
+// adiciona cor de fundo a um elemento da lista quando clicado
 let list = document.querySelector('#lista-tarefas');
 list.addEventListener('click', changeColorTask)
 
@@ -31,7 +31,7 @@ function changeColorTask(event) {
 }
 
 
-
+// adiciona e remove style textdecoration
 list.addEventListener('dblclick', addDecor)
 function addDecor(event) {
   if(event.target.className === 'list-item') {
@@ -44,3 +44,13 @@ function addDecor(event) {
   
 }
 
+
+// botão que remove todos os item da lista
+let clearButton = document.querySelector('#apaga-tudo')
+clearButton.addEventListener('click', clearList)
+function clearList() {
+  let item = document.querySelectorAll('.list-item')
+  for(let i = 0; i < item.length; i += 1) {
+    item[i].remove();
+  }
+} 
