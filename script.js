@@ -22,5 +22,9 @@ let list = document.querySelector('#lista-tarefas');
 list.addEventListener('click', changeColorTask)
 
 function changeColorTask(event) {
+  let item = document.querySelectorAll('.list-item')
+  for(let i = 0; i < item.length; i += 1) {
+    item[i].style.backgroundColor = '';
+  }
   event.target.style.backgroundColor = 'gray'  
 }
