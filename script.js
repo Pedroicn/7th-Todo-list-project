@@ -26,5 +26,21 @@ function changeColorTask(event) {
   for(let i = 0; i < item.length; i += 1) {
     item[i].style.backgroundColor = '';
   }
-  event.target.style.backgroundColor = 'gray'  
+  event.target.style.backgroundColor = 'gray' 
+
 }
+
+
+
+list.addEventListener('dblclick', addDecor)
+function addDecor(event) {
+  if(event.target.className === 'list-item') {
+    event.target.classList.add('completed');
+    event.target.style.textDecoration = 'line-through solid black'
+  }else {
+    event.target.classList.remove('completed');
+    event.target.style.textDecoration = '';
+  }
+  
+}
+
