@@ -54,3 +54,14 @@ function clearList() {
     item[i].remove();
   }
 } 
+
+// Botão que remove os itens da lista finalizados
+
+let finishedButton = document.querySelector('#remover-finalizados')
+finishedButton.addEventListener('click', clearFinishedTasks)
+function clearFinishedTasks() {
+  let finishedTasks = document.querySelectorAll('.completed')
+  for(let i = 0; i < finishedTasks.length; i += 1) {
+    finishedTasks[i].remove();
+  }
+}
