@@ -65,3 +65,18 @@ function clearFinishedTasks() {
     finishedTasks[i].remove();
   }
 }
+
+let saveButton = document.querySelector('#salvar-tarefas')
+
+saveButton.addEventListener('click', saveTasks)
+function saveTasks() {
+  let list = document.querySelector('#lista-tarefas');
+  localStorage.setItem('mylist', JSON.stringify(list.innerHTML))
+ 
+}
+
+window.onload = carregar;
+function carregar() {
+  const myTasks = JSON.parse(localStorage.getItem('mylist'));
+  list.innerHTML = myTasks;
+}
