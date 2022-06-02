@@ -25,16 +25,17 @@ function changeColorTask(event) {
   let item = document.querySelectorAll('.list-item')
   for(let i = 0; i < item.length; i += 1) {
     item[i].style.backgroundColor = '';
+    item[i].classList.remove('selected')
   }
   event.target.style.backgroundColor = 'gray' 
-
+  event.target.classList.add('selected')
 }
 
 
 // adiciona e remove style textdecoration
 list.addEventListener('dblclick', addDecor)
 function addDecor(event) {
-  if(event.target.className === 'list-item') {
+  if(event.target.className === 'list-item selected') {
     event.target.classList.add('completed');
     event.target.style.textDecoration = 'line-through solid black'
   }else {
@@ -79,4 +80,24 @@ window.onload = carregar;
 function carregar() {
   const myTasks = JSON.parse(localStorage.getItem('mylist'));
   list.innerHTML = myTasks;
+}
+
+
+const upButton = document.querySelector('#mover-cima')
+upButton.addEventListener('click', moveUp)
+
+function moveUp() {
+  const selecionado = document.querySelector('.selected')
+  if(selecionado && selecionado.previousSibling) {
+    list.insertBefore(selecionado, selecionado.previousSibling)
+  }
+}
+
+const downButton = document.querySelector('#mover-baixo');
+downButton.addEventListener('click', moveDown)
+function moveDown() {
+  const selecionado = document.querySelector('.selected')
+  if(selecionado && selecionado.nextSibling) {
+    list.insertBefore(selecionado.nextSibling, selecionado)
+  }
 }
