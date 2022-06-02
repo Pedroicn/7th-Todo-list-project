@@ -101,3 +101,10 @@ function moveDown() {
     list.insertBefore(selecionado.nextSibling, selecionado)
   }
 }
+
+const selectedRemove = document.querySelector("#remover-selecionado");
+selectedRemove.addEventListener('click', removeSelecionado);
+function removeSelecionado() {
+  const selecionado = document.querySelector('.selected')
+  selecionado.remove()
+}
