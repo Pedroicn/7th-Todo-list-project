@@ -1,0 +1,21 @@
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 50px auto 0 auto;
+  background-color: rgb(150, 90, 196);
+  width: 80%;
+  height: 500px;
+  border-radius: 10%;
+  border: 1px solid black
+  
+}
+
+body {
+  background-color: rgb(132, 36, 196);
+}
+
+ol {
+  margin-top: 20px;
+}
