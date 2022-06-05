@@ -9,6 +9,7 @@ const redButton = document.querySelector('#fire');
 const greenButton = document.querySelector('#earth');
 const blueButton = document.querySelector('#water');
 const sectionImages = document.querySelector('#img-section')
+const memeBoard = document.getElementsByClassName('meme-images')
 
 
 function textInsert() {
@@ -43,8 +44,5 @@ greenButton.addEventListener('click', addBorderGreen);
 sectionImages.addEventListener('click', addImage)
 
 function addImage(event) {
-  if(event.target.src !== '') {
-    boxImg.src = event.target.src;
-  }
-  
+  boxImg.src = event.target.src;
 }

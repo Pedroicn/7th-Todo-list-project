@@ -8,34 +8,43 @@
   <title>Document</title>
 </head>
 <body>
+  <header>
+    <h1>Meme Generator</h1>
+  </header>
   <main>
-    <header>
-      <h1>Meme Generator</h1>
-    </header>
-  
-    <section>
-      <label for="text-input">Texto:</label>
-      <input id="text-input" name="text-input" type="text" maxlength="60">
-      <br>
-      <label id="" for="">Foto:</label>
-      <input type="file" name="img" id="meme-insert">
-    </section>
-  
-    <div id="meme-image-container">
-      <img id="meme-image" src="" alt="">
-      <p id="meme-text"></p>
+    
+    <div id="meme-generate">
+      <section>
+        <label for="text-input">Texto:</label>
+        <input id="text-input" name="text-input" type="text" maxlength="60">
+        <br>
+        <br>
+        <label id="" for="">Foto:</label>
+        <input type="file" name="img" id="meme-insert">
+      </section>
+    
+      <div id="meme-image-container">
+        <img id="meme-image" src="" alt="">
+        <p id="meme-text"></p>
+      </div>
+      
+      <section id="borderButtons">
+        <p>Selecione uma borda:</p>
+        <br>
+        <button id="fire">FIRE</button>
+        <button id="water">WATER</button>
+        <button id="earth">EARTH</button>
+      </section>
     </div>
-    <section id="img-section">
-      <img class="meme-images" id="meme-1" src="/imgs/meme1.png" alt="">
-      <img class="meme-images" id="meme-2" src="/imgs/meme2.png" alt="">
-      <img class="meme-images" id="meme-3" src="/imgs/meme3.png" alt="">
-      <img class="meme-images" id="meme-4" src="imgs/meme4.png" alt="">
-    </section>
-    <section id="borderButtons">
-      <button id="fire">FIRE</button>
-      <button id="water">WATER</button>
-      <button id="earth">EARTH</button>
-    </section>
+    <div>
+      <section id="img-section">
+        <img class="meme-images" id="meme-1" src="/imgs/meme1.png" alt="">
+        <img class="meme-images" id="meme-2" src="/imgs/meme2.png" alt="">
+        <img class="meme-images" id="meme-3" src="/imgs/meme3.png" alt="">
+        <img class="meme-images" id="meme-4" src="imgs/meme4.png" alt="">
+      </section>
+    </div>
+   
   </main>
   
   <script src="script.js"></script>
