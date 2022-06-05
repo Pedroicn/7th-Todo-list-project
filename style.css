@@ -5,4 +5,18 @@
   border: 1px solid black;
   justify-content: center;
   align-items: center;
+  position: relative;
+  box-sizing: border-box;
 }
+
+#meme-image {
+  width: 500px;
+  height: 500px;
+  position: absolute;
+  
+}
+
+#meme-text {
+  z-index: 1;
+}
+
