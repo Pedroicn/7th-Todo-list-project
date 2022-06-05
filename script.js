@@ -1,3 +1,5 @@
+
+
 const textInput = document.querySelector('#text-input');
 const boxText = document.querySelector('#meme-text');
 const inputImg = document.querySelector('#meme-insert');
@@ -6,7 +8,8 @@ const imgContainer = document.querySelector('#meme-image-container')
 const redButton = document.querySelector('#fire');
 const greenButton = document.querySelector('#earth');
 const blueButton = document.querySelector('#water');
-const buttonsSection = document.querySelector('#borderButtons');
+const sectionImages = document.querySelector('#img-section')
+
 
 function textInsert() {
   boxText.innerText = textInput.value;
@@ -36,3 +39,12 @@ function addBorderGreen() {
 redButton.addEventListener('click', addBorderRed);
 blueButton.addEventListener('click', addBordeBlue);
 greenButton.addEventListener('click', addBorderGreen);
+
+sectionImages.addEventListener('click', addImage)
+
+function addImage(event) {
+  if(event.target.src !== '') {
+    boxImg.src = event.target.src;
+  }
+  
+}
